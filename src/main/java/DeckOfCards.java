@@ -33,14 +33,13 @@ public class DeckOfCards {
         for(int i=0;i<amountOfCards;i++) {
             PlayingCard card = getRandomPlayingCard();
             dealtHand.add(card);
+            playingCards.remove(card);
         }
 
         return dealtHand;
     }
 
-
-    //Her kan du også vurdere om det vil være nyttig å lage en egen klasse for å representere en hånd med kort.
-    //Da kan man for eksempel legge til metoder på denne klassen for å f.eks. sjekke for flush og andre poenggivende kombinasjoner.
-
-
+    public int getAllPlayingCards(){
+        return playingCards.size();
+    }
 }
