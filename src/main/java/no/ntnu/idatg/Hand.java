@@ -3,6 +3,12 @@ package no.ntnu.idatg;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a hand of cards. The number of cards on hand can differ.
+ *
+ * @author Martin Hegnum Johannessen
+ * @version 2022-03-15
+ */
 public class Hand {
 
     private List<PlayingCard> cardsOnHand;
@@ -10,10 +16,19 @@ public class Hand {
     private List<Character> suits;
     private Hand hand;
 
+    /**
+     * Creates an instance of a hand which is held in an ArrayList
+     * @param cardsOnHand the list of cards on hand
+     */
     public Hand(List<PlayingCard> cardsOnHand){
         cardsOnHand = new ArrayList<>(deckOfCards.dealHand(5));
     }
 
+    /**
+     * Returns whether the hand contains a flush or not
+     *
+     * @return the whether the hand contains a flush or not as a boolean
+     */
     public boolean checkFlush(){
         boolean isFlush = false;
         int cardCounter = 0;
