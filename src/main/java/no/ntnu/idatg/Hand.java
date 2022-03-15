@@ -18,9 +18,8 @@ public class Hand {
 
     /**
      * Creates an instance of a hand which is held in an ArrayList
-     * @param cardsOnHand the list of cards on hand
      */
-    public Hand(List<PlayingCard> cardsOnHand){
+    public Hand(){
         cardsOnHand = new ArrayList<>(deckOfCards.dealHand(5));
     }
 
@@ -34,13 +33,23 @@ public class Hand {
         int cardCounter = 0;
         for(Character suit : deckOfCards.getAllSuits()){
             //lambda feil, må telle opp antall av unik char for å sjekke om den er 5 eller mer.
-                    if(cardsOnHand.stream().collect(suit -> suits).count(cardCounter<= 5)){
+                   if(cardsOnHand.stream().collect(suit -> suits).count(cardCounter<= 5)){
                 isFlush = true;
                 }
             }
         return isFlush; }
 
-        //Her kan du også vurdere om det vil være nyttig å lage en egen klasse for å representere en hånd med kort.
+
+    public int getIntValueFromCardsOnHand() {
+        int sum = 0;
+        for (PlayingCard card : cardsOnHand) {
+            sum = sum + card.getFace();
+        }
+        return sum;
+    }
+}
+
+
         //Da kan man for eksempel legge til metoder på denne klassen for å f.eks. sjekke for flush og andre poenggivende kombinasjoner.
 
 
