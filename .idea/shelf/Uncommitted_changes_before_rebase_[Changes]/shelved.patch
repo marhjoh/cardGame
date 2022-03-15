@@ -1,0 +1,339 @@
+Index: src/main/java/DeckOfCards.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Random;\r\n\r\npublic class DeckOfCards {\r\n\r\n    private final List<PlayingCard> playingCards;\r\n    private final char[] suits = { 'S', 'H', 'D', 'C' };\r\n    private final int[] faces = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};\r\n    private static final int DECK_SIZE = 52;\r\n    private Random random;\r\n\r\n    public DeckOfCards(){\r\n        random = new Random();\r\n        playingCards = new ArrayList<>(DECK_SIZE);\r\n\r\n        int cardIndex = 0;\r\n        for (char suit : suits) {\r\n            for (int face : faces) {\r\n                playingCards.add(cardIndex, new PlayingCard(suit, face));\r\n                cardIndex++;\r\n            }\r\n        }\r\n    }\r\n\r\n    public PlayingCard getRandomPlayingCard(){\r\n        int randomIndex = random.nextInt(0, DECK_SIZE-1);\r\n        return playingCards.get(randomIndex);\r\n    }\r\n\r\n    public List<PlayingCard> dealHand(int amountOfCards){\r\n        ArrayList<PlayingCard> dealtHand = new ArrayList<>();\r\n        for(int i=0;i<amountOfCards;i++) {\r\n            PlayingCard card = getRandomPlayingCard();\r\n            dealtHand.add(card);\r\n            playingCards.remove(card);\r\n        }\r\n\r\n        return dealtHand;\r\n    }\r\n\r\n    public int getAllPlayingCards(){\r\n        return playingCards.size();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/DeckOfCards.java b/src/main/java/DeckOfCards.java
+--- a/src/main/java/DeckOfCards.java	(revision 280b9770067bed757be7d7130fdcb8d9fc3d18bc)
++++ b/src/main/java/DeckOfCards.java	(date 1647268668502)
+@@ -14,11 +14,9 @@
+         random = new Random();
+         playingCards = new ArrayList<>(DECK_SIZE);
+ 
+-        int cardIndex = 0;
+         for (char suit : suits) {
+             for (int face : faces) {
+-                playingCards.add(cardIndex, new PlayingCard(suit, face));
+-                cardIndex++;
++                playingCards.add(new PlayingCard(suit, face));
+             }
+         }
+     }
+@@ -42,4 +40,8 @@
+     public int getAllPlayingCards(){
+         return playingCards.size();
+     }
++
++    public char[] getAllSuits(){
++        return suits;
++    }
+ }
+Index: src/main/java/PlayingCard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/**\r\n * Represents a playing card. A playing card has a number (face) between\r\n * 1 and 13, where 1 is called an Ace, 11 = Knight, 12 = Queen and 13 = King.\r\n * The card can also be one of 4 suits: Spade, Heart, Diamonds and Clubs.\r\n *\r\n * @author ntnu\r\n * @version 2020-01-10\r\n */\r\npublic class PlayingCard {\r\n\r\n    private final char suit; // 'S'=spade, 'H'=heart, 'D'=diamonds, 'C'=clubs\r\n    private final int face; // a number between 1 and 13\r\n\r\n    /**\r\n     * Creates an instance of a PlayingCard with a given suit and face.\r\n     *\r\n     * @param suit The suit of the card, as a single character. 'S' for Spades,\r\n     *             'H' for Heart, 'D' for Diamonds and 'C' for clubs\r\n     * @param face The face value of the card, an integer between 1 and 13\r\n     */\r\n    public PlayingCard(char suit, int face) {\r\n        this.suit = suit;\r\n        this.face = face;\r\n    }\r\n    /**\r\n     * Returns the suit and face of the card as a string.\r\n     * A 4 of hearts is returned as the string \"H4\".\r\n     *\r\n     * @return the suit and face of the card as a string\r\n     */\r\n    public String getAsString() {\r\n        return String.format(\"%s%s\", suit, face);\r\n    }\r\n    /**\r\n     * Returns the suit of the card, 'S' for Spades, 'H' for Heart, 'D' for Diamonds and 'C' for Clubs\r\n     *\r\n     * @return the suit of the card\r\n     */\r\n    public char getSuit() {\r\n        return suit;\r\n    }\r\n    /**\r\n     * Returns the face of the card (value between 1 and 13).\r\n     *\r\n     * @return the face of the card\r\n     */\r\n    public int getFace() {\r\n        return face;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/PlayingCard.java b/src/main/java/PlayingCard.java
+--- a/src/main/java/PlayingCard.java	(revision 280b9770067bed757be7d7130fdcb8d9fc3d18bc)
++++ b/src/main/java/PlayingCard.java	(date 1647263836198)
+@@ -47,4 +47,5 @@
+     public int getFace() {
+         return face;
+     }
++
+ }
+Index: src/main/java/Hand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Hand.java b/src/main/java/Hand.java
+new file mode 100644
+--- /dev/null	(date 1647276415525)
++++ b/src/main/java/Hand.java	(date 1647276415525)
+@@ -0,0 +1,31 @@
++import java.util.ArrayList;
++import java.util.List;
++
++public class Hand {
++
++    private List<PlayingCard> cardsOnHand;
++    private DeckOfCards deckOfCards;
++    private List<Character> suits;
++    private Hand hand;
++
++    public Hand(List<PlayingCard> cardsOnHand){
++        cardsOnHand = new ArrayList<>(deckOfCards.dealHand(5));
++    }
++
++    public boolean checkFlush(){
++        boolean isFlush = false;
++        int cardCounter = 0;
++        for(Character suit : deckOfCards.getAllSuits()){
++            //lambda feil, må telle opp antall av unik char for å sjekke om den er 5 eller mer.
++            if(cardsOnHand.stream().collect(suit -> suits).count(cardCounter<= 5)){
++                isFlush = true;
++                }
++        }
++        return isFlush; }
++
++    //Her kan du også vurdere om det vil være nyttig å lage en egen klasse for å representere en hånd med kort.
++    //Da kan man for eksempel legge til metoder på denne klassen for å f.eks. sjekke for flush og andre poenggivende kombinasjoner.
++
++
++
++}
+Index: src/test/java/TestHand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/TestHand.java b/src/test/java/TestHand.java
+new file mode 100644
+--- /dev/null	(date 1647271048751)
++++ b/src/test/java/TestHand.java	(date 1647271048751)
+@@ -0,0 +1,31 @@
++import org.junit.jupiter.api.BeforeEach;
++import org.junit.jupiter.api.Test;
++
++import java.util.ArrayList;
++import java.util.List;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++class TestHand {
++
++    private DeckOfCards deckOfCards;
++    private List<PlayingCard> playingCards;
++    private Hand hand;
++
++    @BeforeEach
++    void setup(){
++        deckOfCards = new DeckOfCards();
++        playingCards = new ArrayList<>();
++        hand = new Hand(playingCards);
++    }
++
++    @Test
++    void testConstructor(){
++    }
++
++    @Test
++    void checkFlush() {
++        deckOfCards.dealHand(5);
++        assertEquals(false, hand.checkFlush());
++    }
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"02c70a28-3501-42c1-80bb-7a5175ab1efe\" name=\"Changes\" comment=\"Added git.ignore and pom.xml\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/DeckOfCards.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/PlayingCard.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"266ZZiyhmOWWYZs6l8JVhd6BAmI\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SONARLINT_PRECOMMIT_ANALYSIS\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\marti\\OneDrive\\Skrivebord\\InteliJProsjekter\\Programmering 2\\cardGame\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"02c70a28-3501-42c1-80bb-7a5175ab1efe\" name=\"Changes\" comment=\"\" />\r\n      <created>1646746055890</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1646746055890</updated>\r\n      <workItem from=\"1646746057529\" duration=\"1302000\" />\r\n      <workItem from=\"1646747855900\" duration=\"1471000\" />\r\n      <workItem from=\"1647253614973\" duration=\"4540000\" />\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"Added git.ignore and pom.xml\">\r\n      <created>1646746426471</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1646746426471</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"Added git.ignore and pom.xml\">\r\n      <created>1646747090323</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1646747090323</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/cardgame\" />\r\n    </ignored-roots>\r\n    <MESSAGE value=\"Added git.ignore and pom.xml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added git.ignore and pom.xml\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 280b9770067bed757be7d7130fdcb8d9fc3d18bc)
++++ b/.idea/workspace.xml	(date 1647339305639)
+@@ -4,15 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Added git.ignore and pom.xml">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/DeckOfCards.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/PlayingCard.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Added and modified 2 methods.">
++      <change afterPath="$PROJECT_DIR$/src/main/java/Hand.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/TestHand.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeckOfCards.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/PlayingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayingCard.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -23,11 +21,20 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Class" />
++        <option value="JUnit5 Test Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -43,8 +50,10 @@
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
++    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+-    <property name="project.structure.last.edited" value="Project" />
++    <property name="project.structure.last.edited" value="Modules" />
+     <property name="project.structure.proportion" value="0.0" />
+     <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+@@ -53,6 +62,73 @@
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame" />
+     </key>
++    <key name="CreateTestDialog.Recents.Supers">
++      <recent name="" />
++    </key>
++    <key name="CreateTestDialog.RecentsKey">
++      <recent name="" />
++    </key>
++  </component>
++  <component name="RunManager" selected="JUnit.TestDeckOfCards.getRandomPlayingCard">
++    <configuration name="TestDeckOfCards.dealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="cardGame" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="TestDeckOfCards" />
++      <option name="METHOD_NAME" value="dealHand" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="TestDeckOfCards.getRandomPlayingCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="cardGame" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="TestDeckOfCards" />
++      <option name="METHOD_NAME" value="getRandomPlayingCard" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="TestDeckOfCards.testDealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="cardGame" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="TestDeckOfCards" />
++      <option name="METHOD_NAME" value="testDealHand" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="TestDeckOfCards.testGetAllPlayingCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="cardGame" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="TestDeckOfCards" />
++      <option name="METHOD_NAME" value="testGetAllPlayingCards" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="TestHand.checkFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="cardGame" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="TestHand" />
++      <option name="METHOD_NAME" value="checkFlush" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="JUnit.TestDeckOfCards.getRandomPlayingCard" />
++        <item itemvalue="JUnit.TestDeckOfCards.testDealHand" />
++        <item itemvalue="JUnit.TestDeckOfCards.testGetAllPlayingCards" />
++        <item itemvalue="JUnit.TestHand.checkFlush" />
++        <item itemvalue="JUnit.TestDeckOfCards.dealHand" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -64,7 +140,7 @@
+       <updated>1646746055890</updated>
+       <workItem from="1646746057529" duration="1302000" />
+       <workItem from="1646747855900" duration="1471000" />
+-      <workItem from="1647253614973" duration="4540000" />
++      <workItem from="1647253614973" duration="19895000" />
+     </task>
+     <task id="LOCAL−00001" summary="Added git.ignore and pom.xml">
+       <created>1646746426471</created>
+@@ -78,7 +154,43 @@
+       <option name="presentableId" value="LOCAL−00002" />
+       <updated>1646747090323</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL−00003" summary="Added git.ignore">
++      <created>1647258663812</created>
++      <option name="number" value="LOCAL−00003" />
++      <option name="presentableId" value="LOCAL−00003" />
++      <updated>1647258663812</updated>
++    </task>
++    <task id="LOCAL−00004" summary="Modified Sonarlint and added xml files">
++      <created>1647258733083</created>
++      <option name="number" value="LOCAL−00004" />
++      <option name="presentableId" value="LOCAL−00004" />
++      <updated>1647258733083</updated>
++    </task>
++    <task id="LOCAL−00005" summary="Created 2 classes, DeckOfCards and PlayingCard">
++      <created>1647258850784</created>
++      <option name="number" value="LOCAL−00005" />
++      <option name="presentableId" value="LOCAL−00005" />
++      <updated>1647258850784</updated>
++    </task>
++    <task id="LOCAL−00006" summary="Made a test class for PlayingCard">
++      <created>1647261366327</created>
++      <option name="number" value="LOCAL−00006" />
++      <option name="presentableId" value="LOCAL−00006" />
++      <updated>1647261366327</updated>
++    </task>
++    <task id="LOCAL−00007" summary="Made a test class for DeckOfCards">
++      <created>1647262714978</created>
++      <option name="number" value="LOCAL−00007" />
++      <option name="presentableId" value="LOCAL−00007" />
++      <updated>1647262714978</updated>
++    </task>
++    <task id="LOCAL−00008" summary="Added and modified 2 methods.">
++      <created>1647262742127</created>
++      <option name="number" value="LOCAL−00008" />
++      <option name="presentableId" value="LOCAL−00008" />
++      <updated>1647262742127</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -100,6 +212,12 @@
+       <path value="$PROJECT_DIR$/cardgame" />
+     </ignored-roots>
+     <MESSAGE value="Added git.ignore and pom.xml" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added git.ignore and pom.xml" />
++    <MESSAGE value="Added git.ignore" />
++    <MESSAGE value="Modified Sonarlint and added xml files" />
++    <MESSAGE value="Created 2 classes, DeckOfCards and PlayingCard" />
++    <MESSAGE value="Made a test class for PlayingCard" />
++    <MESSAGE value="Made a test class for DeckOfCards" />
++    <MESSAGE value="Added and modified 2 methods." />
++    <option name="LAST_COMMIT_MESSAGE" value="Added and modified 2 methods." />
+   </component>
+ </project>
+\ No newline at end of file
