@@ -17,7 +17,6 @@ public class DeckOfCards {
     private final List<PlayingCard> playingCards;
     private final char[] suits = { 'S', 'H', 'D', 'C' };
     private final int[] faces = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    private static final int DECK_SIZE = 52;
     private Random random;
 
     /**
@@ -26,13 +25,11 @@ public class DeckOfCards {
      */
     public DeckOfCards(){
         random = new Random();
-        playingCards = new ArrayList<>(DECK_SIZE);
+        playingCards = new ArrayList<>();
 
-        int cardIndex = 0;
         for (char suit : suits) {
             for (int face : faces) {
-                playingCards.add(cardIndex, new PlayingCard(suit, face));
-                cardIndex++;
+                playingCards.add(new PlayingCard(suit, face));
             }
         }
     }
@@ -42,7 +39,7 @@ public class DeckOfCards {
      * @return a random playingCard
      */
     public PlayingCard getRandomPlayingCard(){
-        int randomIndex = random.nextInt(0, DECK_SIZE-1);
+        int randomIndex = random.nextInt(playingCards.size());
         return playingCards.get(randomIndex);
     }
 
@@ -51,7 +48,7 @@ public class DeckOfCards {
      * @param amountOfCards the amount of cards wanted in the hand
      * @return an ArrayList of playingCards
      */
-    public List<PlayingCard> dealHand(int amountOfCards){
+    public ArrayList<PlayingCard> dealHand(int amountOfCards){
         ArrayList<PlayingCard> dealtHand = new ArrayList<>();
         for(int i=0;i<amountOfCards;i++) {
             PlayingCard card = getRandomPlayingCard();
@@ -69,12 +66,5 @@ public class DeckOfCards {
     public int getAllPlayingCards(){
         return playingCards.size();
     }
-
-    /**
-     * Returns the array of different suits
-     * @return the char values of the different suits
-     */
-    public char[] getAllSuits() {
-        return suits;
-    }
 }
+
