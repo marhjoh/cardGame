@@ -10,7 +10,7 @@ import java.util.Random;
  * equally in 4 different suits: Spade, Heart, Diamonds and Clubs.
  *
  * @author Martin Hegnum Johannessen
- * @version 2022-03-15
+ * @version 2022-03-21
  */
 public class DeckOfCards {
 

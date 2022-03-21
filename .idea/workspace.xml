@@ -4,65 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Refactored the pictures">
+    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Added some documentation, implemented some methods and deleted the old GUI class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_spades2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/jack_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_diamonds2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_hearts2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_spades2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_clubs2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_diamonds2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_hearts2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_spades2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/playing-cards-back-design.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/playing-cards-back-design.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_clubs2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_diamonds2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_hearts2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/PlayingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/PlayingCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/no/ntnu/idatg/TestHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/no/ntnu/idatg/TestHand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +84,7 @@
       <recent name="no.ntnu.idatg" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CardGameApplication">
+  <component name="RunManager" selected="JUnit.TestHand.testGetAllHeartCardsOnHand">
     <configuration name="CardGameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.ntnu.idatg.CardGameApplication" />
       <module name="cardGame" />
@@ -182,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestHand.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestHand.testGetAllHeartCardsOnHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cardGame" />
       <extension name="coverage">
         <pattern>
@@ -192,13 +138,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.ntnu.idatg" />
       <option name="MAIN_CLASS_NAME" value="no.ntnu.idatg.TestHand" />
-      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="METHOD_NAME" value="testGetAllHeartCardsOnHand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestHand.testGetHandSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayingCard.testGetAsString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cardGame" />
       <extension name="coverage">
         <pattern>
@@ -207,8 +153,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="no.ntnu.idatg" />
-      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatg.TestHand" />
-      <option name="METHOD_NAME" value="testGetHandSize" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatg.TestPlayingCard" />
+      <option name="METHOD_NAME" value="testGetAsString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestHand.testGetAllHeartCardsOnHand" />
+        <item itemvalue="JUnit.TestPlayingCard.testGetAsString" />
         <item itemvalue="Application.CardGameApplication" />
         <item itemvalue="JUnit.TestDeckOfCards" />
         <item itemvalue="JUnit.TestHand" />
-        <item itemvalue="JUnit.TestHand.testConstructor" />
-        <item itemvalue="JUnit.TestHand.testGetHandSize" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646746055890</updated>
       <workItem from="1646746057529" duration="387000" />
-      <workItem from="1647437010879" duration="17616000" />
+      <workItem from="1647437010879" duration="22334000" />
     </task>
     <task id="LOCAL−00001" summary="Added git.ignore and pom.xml">
       <created>1646746426471</created>
@@ -331,7 +277,25 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1647869709513</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="Refactored the pictures, and modified the buttons in the controller">
+      <created>1647872761001</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1647872761001</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Refactored the pictures">
+      <created>1647872936422</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1647872936422</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Added some documentation, implemented some methods and deleted the old GUI class">
+      <created>1647877165825</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1647877165825</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,8 +340,10 @@
     <MESSAGE value="Moved git.ignore" />
     <MESSAGE value="Updated javaDoc and added tests to the classes. Also added a getHand method in Hand" />
     <MESSAGE value="Added pictures, and updated the module file and pom.xml" />
+    <MESSAGE value="Refactored the pictures, and modified the buttons in the controller" />
     <MESSAGE value="Refactored the pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the pictures" />
+    <MESSAGE value="Added some documentation, implemented some methods and deleted the old GUI class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some documentation, implemented some methods and deleted the old GUI class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

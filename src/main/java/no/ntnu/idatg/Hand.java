@@ -1,15 +1,15 @@
 package no.ntnu.idatg;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
  * Represents a hand of cards. The number of cards on hand can differ.
  *
  * @author Martin Hegnum Johannessen
- * @version 2022-03-15
+ * @version 2022-03-21
  */
 public class Hand {
 
@@ -29,7 +29,6 @@ public class Hand {
      *
      * @return the whether the hand contains a flush or not as a boolean
      */
-
     public boolean checkFlushWithMapValues(){
         Map<Character, Long> map = cardsOnHand.stream()
                 .collect(Collectors.groupingBy(PlayingCard::getSuit, Collectors.counting()));
@@ -53,7 +52,6 @@ public class Hand {
 
         for(Character suit : map.keySet()){
             if(map.get(suit) >= 5){
-                System.out.println(suit);
                 return true;
             }
         }
@@ -83,28 +81,20 @@ public class Hand {
     }
 
     /**
-     * Returns all the heart cards on the hand
+     * Returns the heart cards on the hand
      *
-     * @return the heart cards on the hand as an ArrayList
+     * @return the cards of suit heart as a String
      */
-    public ArrayList<PlayingCard> getAllHeartCardsOnHand() {
-        ArrayList<PlayingCard> allHeartCardsOnHand = new ArrayList<>();
-        for (PlayingCard card : cardsOnHand) {
-            char suit = card.getSuit();
-            if (card.getSuit() == 'H') {
-                allHeartCardsOnHand.add(card);
-            }
+    public String getAllHeartCardsOnHand(){
+        String message = "No heart cards on hand";
+        String matchingCards = cardsOnHand.stream().
+                filter(p -> p.getSuit() == 'H').toList().stream().map(PlayingCard::getAsString).collect(Collectors.joining(", "));
+        if (matchingCards.length() > 0) {
+            return matchingCards;
+        } else {
+            return message;
         }
-        return allHeartCardsOnHand;
     }
-
-        /*
-    public String getAllHeartCardsAsString() {
-            allHearCardsOnHandString = allHeartCardsOnHand.stream().map(PlayingCard::toString)
-                    .collect(Collectors.joining(", "));
-        }
-        return allHearCardsOnHandString;
-    }*/
 
     /**
      * Returns the size of the hand
@@ -115,7 +105,29 @@ public class Hand {
         return cardsOnHand.size();
     }
 
+    /**
+     * Returns all the cards on the hand
+     *
+     * @return all the cards on the hand as a list
+     */
     public List<PlayingCard> getCardsOnHand(){
         return cardsOnHand;
     }
+
+    /**
+     * Returns whether the hand contains a flush or not.
+     *
+     * @return whether the hand contains a flush or not (5 or more cards of the similar suit) as a boolean
+     */
+    public boolean checkQueenOfSpades(){
+        Optional<PlayingCard> matchingObject = cardsOnHand.stream().
+                filter(p -> p.getAsString().equals("S12")).
+                findFirst();
+
+        if(matchingObject.isPresent()){
+                return true;
+        }
+        return false;
+    }
+
 }

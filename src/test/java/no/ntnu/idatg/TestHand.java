@@ -53,7 +53,7 @@ class TestHand {
     @Test
     @DisplayName("This method tests the amount of heart cards on hand, this will never be above 6")
     void testGetAllHeartCardsOnHand(){
-        assertNotEquals(6, hand.getAllHeartCardsOnHand().size());
+       assertNotEquals(6, hand.getAllHeartCardsOnHand().length());
     }
 
     @Test
