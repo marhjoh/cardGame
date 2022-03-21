@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Added some documentation, implemented some methods and deleted the old GUI class">
+    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Modified some methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/PlayingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/PlayingCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/no/ntnu/idatg/TestHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/no/ntnu/idatg/TestHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646746055890</updated>
       <workItem from="1646746057529" duration="387000" />
-      <workItem from="1647437010879" duration="22334000" />
+      <workItem from="1647437010879" duration="25322000" />
     </task>
     <task id="LOCAL−00001" summary="Added git.ignore and pom.xml">
       <created>1646746426471</created>
@@ -295,7 +294,13 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1647877165825</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="Modified some methods">
+      <created>1647877260520</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1647877260520</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +348,8 @@
     <MESSAGE value="Refactored the pictures, and modified the buttons in the controller" />
     <MESSAGE value="Refactored the pictures" />
     <MESSAGE value="Added some documentation, implemented some methods and deleted the old GUI class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some documentation, implemented some methods and deleted the old GUI class" />
+    <MESSAGE value="Modified some methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified some methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

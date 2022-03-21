@@ -22,6 +22,10 @@ public class CardGameApplication extends Application {
         stage.show();
     }
 
+    /**
+     * This method starts the application
+     * @param args the arguments of the method
+     */
     public static void main(String[] args) {
         launch();
     }

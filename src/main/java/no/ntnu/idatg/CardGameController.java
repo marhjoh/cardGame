@@ -3,15 +3,15 @@ package no.ntnu.idatg;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static javafx.application.Platform.exit;
 
 /**
  * Represents the card game controller.
@@ -58,7 +58,13 @@ public class CardGameController implements Initializable {
     private TextField sumOfTheFaces;
 
     @FXML
-    private void onDealHandButtonClick(ActionEvent event){
+    private MenuItem closeMenuItem;
+
+    /**
+     * Creates a new hand of 5 cards, and distributes the image that matches each card's suit and face.
+     */
+    @FXML
+    private void onDealHandButtonClick(){
     hand = new Hand();
     cardsOnHand = hand.getCardsOnHand();
     card1.setImage(this.getImage(cardsOnHand.get(0).getSuit(),cardsOnHand.get(0).getFace()));
@@ -68,6 +74,14 @@ public class CardGameController implements Initializable {
     card5.setImage(this.getImage(cardsOnHand.get(4).getSuit(),cardsOnHand.get(4).getFace()));
     }
 
+    /**
+     * Returns the image that matches the given card's suit and face
+     *
+     * @param suit the suit of the playing card
+     * @param face the face of the playing card
+     *
+     * @return an image that matches the given card's suit and face
+     */
     @FXML
     private Image getImage(char suit, int face){
         String imageFace ;
@@ -110,7 +124,12 @@ public class CardGameController implements Initializable {
 
     }
 
-    //TODO: Hvis hånd ikke er delt ut, pop up error melding.
+    /**
+     * When the check hand button is pressed, it will sum the hand value, check if the hand contains a flush,
+     * check if the hand contains queen of spades and get all the heart cards on the hand
+     *
+     * TODO: Hvis hånd ikke er delt ut, pop up error melding.
+     */
     @FXML
     private void onCheckHandButtonClick(){
         String sum = String.valueOf(hand.getIntValueFromCardsOnHand());
@@ -126,6 +145,30 @@ public class CardGameController implements Initializable {
         cardsOfHearts.setText(heartCardsOnHand);
     }
 
+    /**
+     * Creates an alert box if the close button is pressed
+     *
+     * TODO: Thrower exception ingen tar imot
+     */
+    @FXML
+    private void onCloseMenuItemClick(){
+        Alert closeApplicationAlert = new Alert(Alert.AlertType.INFORMATION);
+        closeApplicationAlert.setTitle("Exit Application");// line 2
+        closeApplicationAlert.setHeaderText("Exiting the Card Game Application");// line 3
+        closeApplicationAlert.setContentText("Are you sure you want to exit the application?");// line 4
+        if (closeApplicationAlert.showAndWait().get() == ButtonType.OK) {
+            exit();
+        } else {
+            closeApplicationAlert.close();
+        }
+    }
+
+    /**
+     * This method will initialize the application
+     *
+     * @param url the url of the application
+     * @param resourceBundle the resource bundle of the application
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
