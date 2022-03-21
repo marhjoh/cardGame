@@ -7,6 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Represents the card game application
+ *
+ * @author Martin Hegnum Johannessen
+ * @version 2022-03-21
+ */
 public class CardGameApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {

@@ -13,6 +13,12 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Represents the card game controller.
+ *
+ * @author Martin Hegnum Johannessen
+ * @version 2022-03-21
+ */
 public class CardGameController implements Initializable {
 
     private Hand hand;
@@ -104,11 +110,20 @@ public class CardGameController implements Initializable {
 
     }
 
-
+    //TODO: Hvis hånd ikke er delt ut, pop up error melding.
     @FXML
     private void onCheckHandButtonClick(){
         String sum = String.valueOf(hand.getIntValueFromCardsOnHand());
         sumOfTheFaces.setText(sum);
+
+        String checkFlush = String.valueOf(hand.checkFlushWithMapValues());
+        flush.setText(checkFlush);
+
+        String checkQueenOfSpades = String.valueOf(hand.checkQueenOfSpades());
+        queenOfSpades.setText(checkQueenOfSpades);
+
+        String heartCardsOnHand = String.valueOf(hand.getAllHeartCardsOnHand());
+        cardsOfHearts.setText(heartCardsOnHand);
     }
 
     @Override
