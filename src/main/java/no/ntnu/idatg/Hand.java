@@ -114,4 +114,8 @@ public class Hand {
     public int getHandSize(){
         return cardsOnHand.size();
     }
+
+    public List<PlayingCard> getCardsOnHand(){
+        return cardsOnHand;
+    }
 }

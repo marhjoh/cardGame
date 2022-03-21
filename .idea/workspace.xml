@@ -4,67 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Added pictures, and updated the module file and pom.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/GUI.java" afterDir="false" />
+    <list default="true" id="02c70a28-3501-42c1-80bb-7a5175ab1efe" name="Changes" comment="Refactored the pictures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/CardGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/cardGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/10_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/10_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/10_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/10_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/10_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/10_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/10_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/10_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/2_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/2_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/2_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/2_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/2_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/2_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/2_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/2_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/3_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/3_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/3_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/3_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/3_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/3_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/3_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/3_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/4_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/4_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/4_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/4_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/4_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/4_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/4_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/4_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/5_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/5_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/5_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/5_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/5_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/5_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/5_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/5_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/6_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/6_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/6_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/6_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/6_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/6_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/6_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/6_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/7_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/7_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/7_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/7_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/7_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/7_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/7_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/7_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/8_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/8_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/8_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/8_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/8_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/8_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/8_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/8_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/9_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/9_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/9_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/9_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/9_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/9_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/9_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/9_of_spades.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/ace_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/ace_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/ace_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/ace_of_diamonds.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/ace_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/ace_of_hearts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/ace_of_spades2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/ace_of_spades2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/jack_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/jack_of_clubs2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/jack_of_diamonds2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/jack_of_diamonds2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/jack_of_hearts2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/jack_of_hearts2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/jack_of_spades2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/jack_of_spades2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/king_of_clubs2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/king_of_clubs2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/king_of_diamonds2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/king_of_diamonds2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/king_of_hearts2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/king_of_hearts2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/king_of_spades2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/king_of_spades2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/playing-cards-back-design.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/playing-cards-back-design.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/queen_of_clubs2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/queen_of_clubs2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/queen_of_diamonds2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/queen_of_diamonds2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/queen_of_hearts2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/queen_of_hearts2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/images/queen_of_spades2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/queen_of_spades2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/no.ntnu.idatg/cardGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/no.ntnu.idatg/cardGame-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatg/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cardGame-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/10_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/10_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/2_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/2_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/3_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/3_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/4_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/4_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/5_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/5_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/6_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/6_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/7_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/7_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/8_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/8_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/9_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/9_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/ace_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/ace_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/jack_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/jack_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/king_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/playing-cards-back-design.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/no/ntnu/idatg/images/playing-cards-back-design.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/queen_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/no/ntnu/idatg/Hand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/no.ntnu.idatg/cardGame-view.fxml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -122,12 +121,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src\main\resources" />
       <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src\main\resources\no\ntnu\idatg" />
       <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src\main\resources\no.ntnu.idatg" />
       <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src\main\resources\no.ntnu.idatg\images" />
       <recent name="C:\Users\marti\OneDrive\Skrivebord\InteliJProsjekter\Programmering 2\cardGame\src\main\resources" />
@@ -232,7 +233,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646746055890</updated>
       <workItem from="1646746057529" duration="387000" />
-      <workItem from="1647437010879" duration="14743000" />
+      <workItem from="1647437010879" duration="17616000" />
     </task>
     <task id="LOCAL−00001" summary="Added git.ignore and pom.xml">
       <created>1646746426471</created>
@@ -324,7 +325,13 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1647864683886</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="Refactored the pictures">
+      <created>1647869709513</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1647869709513</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +376,8 @@
     <MESSAGE value="Moved git.ignore" />
     <MESSAGE value="Updated javaDoc and added tests to the classes. Also added a getHand method in Hand" />
     <MESSAGE value="Added pictures, and updated the module file and pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pictures, and updated the module file and pom.xml" />
+    <MESSAGE value="Refactored the pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the pictures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
