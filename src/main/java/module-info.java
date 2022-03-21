@@ -1,4 +1,4 @@
-module cardGame {
+module no.ntnu.idatg {
     requires javafx.controls;
     requires javafx.fxml;
 
