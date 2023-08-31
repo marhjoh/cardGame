@@ -1,92 +1,81 @@
-# cardGame
+# CardGameApplication
 
-Card game
+This Java project simulates a deck of playing cards and a hand of cards. It provides functionalities to deal hands of cards, and perform various checks on a hand's contents.
 
-## Getting started
+## DeckOfCards Class
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Description
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Represents a deck of playing cards with 52 cards, divided equally among 4 suits: Spade, Heart, Diamonds, and Clubs.
 
-## Add your files
+### Methods
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+#### Constructor
+- `DeckOfCards()`: Creates a deck of playing cards with 52 cards, each with a unique combination of suit and value.
 
-```
-cd existing_repo
-git remote add origin https://git.gvk.idi.ntnu.no/course/idatg2001/idatg2001-2022-ws/marhjoh/cardgame.git
-git branch -M main
-git push -uf origin main
-```
+#### `getRandomPlayingCard()`
+- Returns a random playing card from the deck.
 
-## Integrate with your tools
+#### `dealHand(int amountOfCards)`
+- Returns an ArrayList of playing cards representing a hand of the specified number of cards.
 
-- [ ] [Set up project integrations](https://git.gvk.idi.ntnu.no/course/idatg2001/idatg2001-2022-ws/marhjoh/cardgame/-/settings/integrations)
+#### `getAllPlayingCards()`
+- Returns the number of playing cards left in the deck.
 
-## Collaborate with your team
+## Hand Class
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Description
 
-## Test and Deploy
+Represents a hand of playing cards with various functionalities to analyze and manage the cards on hand.
 
-Use the built-in continuous integration in GitLab.
+### Methods
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+#### Constructor
+- `Hand()`: Creates a hand of playing cards with 5 cards dealt from the deck.
 
-***
+#### `checkFlushWithMapValues()`
+- Returns whether the hand contains a flush (5 or more cards of the same suit) using map values.
 
-# Editing this README
+#### `checkFlushWithMapKeySet()`
+- Returns whether the hand contains a flush (5 or more cards of the same suit) using map key set.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+#### `addPlayingCardToHand(PlayingCard playingCard)`
+- Adds a playing card to the hand.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+#### `getIntValueFromCardsOnHand()`
+- Returns the sum of face values of all cards on the hand.
 
-## Name
-Choose a self-explaining name for your project.
+#### `getAllHeartCardsOnHand()`
+- Returns the cards of suit Heart on the hand.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+#### `getHandSize()`
+- Returns the number of cards in the hand.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+#### `getCardsOnHand()`
+- Returns a list of all cards on the hand.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+#### `checkQueenOfSpades()`
+- Returns whether the hand contains the Queen of Spades (S12).
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## PlayingCard Class
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Description
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Represents a playing card with a suit and face value.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### Methods
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+#### Constructor
+- `PlayingCard(char suit, int face)`: Creates an instance of a PlayingCard with a given suit and face.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+#### `getAsString()`
+- Returns the suit and face of the card as a string.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+#### `getSuit()`
+- Returns the suit of the card.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+#### `getFace()`
+- Returns the face value of the card.
 
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Authors
+- Martin Hegnum Johannessen
