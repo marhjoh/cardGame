@@ -125,26 +125,48 @@ public class CardGameController implements Initializable {
 
     }
 
+    // Define a boolean flag to track if the hand has been dealt
+    private boolean handDealt = false;
+
     /**
      * When the check hand button is pressed, it will sum the hand value, check if the hand contains a flush,
-     * check if the hand contains queen of spades and get all the heart cards on the hand
-     *
-     * TODO: Hvis hånd ikke er delt ut, pop up error melding.
+     * check if the hand contains the queen of spades, and get all the heart cards on the hand.
      */
     @FXML
-    private void onCheckHandButtonClick(){
-        String sum = String.valueOf(hand.getIntValueFromCardsOnHand());
-        sumOfTheFaces.setText(sum);
+    private void onCheckHandButtonClick() {
+        // Check if any cards have been dealt
+        if (hand == null || hand.getCardsOnHand().isEmpty()) {
+            // No cards have been dealt, show an alert
+            Alert noCardsAlert = new Alert(Alert.AlertType.WARNING);
+            noCardsAlert.setTitle("No Cards Dealt");
+            noCardsAlert.setHeaderText("No cards have been dealt.");
+            noCardsAlert.setContentText("Please deal a hand before checking.");
 
-        String checkFlush = String.valueOf(hand.checkFlushWithMapValues());
-        flush.setText(checkFlush);
+            ButtonType dealHandButton = new ButtonType("Deal Hand");
+            ButtonType closeButton = new ButtonType("Close", ButtonBar.ButtonData.CANCEL_CLOSE);
+            noCardsAlert.getButtonTypes().setAll(dealHandButton, closeButton);
 
-        String checkQueenOfSpades = String.valueOf(hand.checkQueenOfSpades());
-        queenOfSpades.setText(checkQueenOfSpades);
+            Optional<ButtonType> result = noCardsAlert.showAndWait();
+            if (result.isPresent() && result.get() == dealHandButton) {
+                // User chose to deal a hand, you can call the deal hand method here
+                onDealHandButtonClick();
+            }
+        } else {
+            // Cards have been dealt, perform the hand check
+            String sum = String.valueOf(hand.getIntValueFromCardsOnHand());
+            sumOfTheFaces.setText(sum);
 
-        String heartCardsOnHand = String.valueOf(hand.getAllHeartCardsOnHand());
-        cardsOfHearts.setText(heartCardsOnHand);
+            String checkFlush = String.valueOf(hand.checkFlushWithMapValues());
+            flush.setText(checkFlush);
+
+            String checkQueenOfSpades = String.valueOf(hand.checkQueenOfSpades());
+            queenOfSpades.setText(checkQueenOfSpades);
+
+            String heartCardsOnHand = String.valueOf(hand.getAllHeartCardsOnHand());
+            cardsOfHearts.setText(heartCardsOnHand);
+        }
     }
+
 
     /**
      * Creates an alert box if the close button is pressed
