@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static javafx.application.Platform.exit;
@@ -147,19 +148,19 @@ public class CardGameController implements Initializable {
 
     /**
      * Creates an alert box if the close button is pressed
-     *
-     * TODO: Thrower exception ingen tar imot
      */
     @FXML
-    private void onCloseMenuItemClick(){
+    private void onCloseMenuItemClick() {
         Alert closeApplicationAlert = new Alert(Alert.AlertType.INFORMATION);
-        closeApplicationAlert.setTitle("Exit Application");// line 2
-        closeApplicationAlert.setHeaderText("Exiting the Card Game Application");// line 3
-        closeApplicationAlert.setContentText("Are you sure you want to exit the application?");// line 4
-        if (closeApplicationAlert.showAndWait().get() == ButtonType.OK) {
-            exit();
+        closeApplicationAlert.setTitle("Exit Application");
+        closeApplicationAlert.setHeaderText("Exiting the Card Game Application");
+        closeApplicationAlert.setContentText("Are you sure you want to exit the application?");
+        Optional<ButtonType> result = closeApplicationAlert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            System.exit(0);
         } else {
-            closeApplicationAlert.close();
+            // User chose not to exit, do nothing or handle it as needed
         }
     }
 
