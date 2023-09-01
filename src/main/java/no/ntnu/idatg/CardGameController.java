@@ -186,6 +186,16 @@ public class CardGameController implements Initializable {
         }
     }
 
+    @FXML
+    private void onAboutMenuItemClick() {
+        Alert aboutAlert = new Alert(Alert.AlertType.INFORMATION);
+        aboutAlert.setTitle("About the application");
+        aboutAlert.setHeaderText("Card Game Application");
+        aboutAlert.setContentText("The application allows you to check your hand");
+
+        aboutAlert.showAndWait();
+    }
+
     /**
      * This method will initialize the application
      *
