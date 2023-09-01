@@ -3,7 +3,7 @@
 ## About
 This Java project simulates a deck of playing cards and a hand of cards. It provides functionalities to deal hands of cards, and perform various checks on a hand's contents.
 
-![Not Dealt](src/main/resources/no/ntnu/idatg/images/readme/Not Dealt.png)
+![Not_Dealt](src/main/resources/no/ntnu/idatg/images/readme/Not_Dealt.png)
 ![Dealt](src/main/resources/no/ntnu/idatg/images/readme/Dealt.png)
 
 ## DeckOfCards Class
